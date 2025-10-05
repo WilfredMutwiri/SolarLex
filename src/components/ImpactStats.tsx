@@ -1,18 +1,18 @@
 import impactBg from "@/assets/impact-bg.jpg";
 
 const stats = [
-  {
-    number: "2.4M",
-    label: "lights distributed worldwide",
-  },
-  {
-    number: "13.1M",
-    label: "people in sub-Saharan Africa reached by clean, safe, affordable light",
-  },
-  {
-    number: "$312M",
-    label: "saved by families a year",
-  },
+{
+  number: "2.4M",
+  label: "solar lights bringing brighter nights to homes worldwide",
+},
+{
+  number: "13.1M",
+  label: "lives across sub-Saharan Africa illuminated with clean, reliable energy",
+},
+{
+  number: "$312M",
+  label: "saved by families every year through affordable solar power",
+},
 ];
 
 export const ImpactStats = () => {

@@ -11,25 +11,47 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <img src={logo} className="w-14"/>
-            <span className="text-xl font-bold">SolarLex</span>
+            <a href="/" className="flex items-center gap-2">
+              <img src={logo} className="w-14" />
+              <span className="text-xl font-bold">SolarLex</span>
+            </a>
           </div>
 
           <nav className="hidden md:flex items-center gap-6">
-            <a href="#about" className="hover:text-primary transition-colors">About</a>
-            <a href="#stories" className="hover:text-primary transition-colors">Stories</a>
-            <a href="#programs" className="hover:text-primary transition-colors">Programs</a>
-            <a href="#impact" className="hover:text-primary transition-colors">Impact</a>
+            <a href="/" className="hover:text-primary transition-colors">
+              Home
+            </a>
+            <a href="/about" className="hover:text-primary transition-colors">
+              About
+            </a>
+            <a href="/stories" className="hover:text-primary transition-colors">
+              Stories
+            </a>
+            <a
+              href="/programs"
+              className="hover:text-primary transition-colors"
+            >
+              Programs
+            </a>
+            <a href="/Contact" className="hover:text-primary transition-colors">
+              Contact Us
+            </a>
           </nav>
 
           <div className="flex items-center gap-4">
-            <Button variant="outline" size="sm" className="hidden md:inline-flex">
-              Sign up
-            </Button>
-            <Button size="sm">
-              Donate
-            </Button>
-            <button 
+            <a href="/signup" className="text-lg text-yellow-500">
+              <Button
+                variant="outline"
+                size="sm"
+                className="hidden md:inline-flex"
+              >
+                Sign up
+              </Button>
+            </a>
+            <a href="/Donate" className="text-lg text-yellow-500">
+              <Button size="sm">Donate</Button>
+            </a>
+            <button
               className="md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
@@ -41,10 +63,27 @@ export const Header = () => {
         {isMenuOpen && (
           <nav className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col gap-4">
-              <a href="#about" className="hover:text-primary transition-colors">About</a>
-              <a href="#stories" className="hover:text-primary transition-colors">Stories</a>
-              <a href="#programs" className="hover:text-primary transition-colors">Programs</a>
-              <a href="#impact" className="hover:text-primary transition-colors">Impact</a>
+              <a href="/about" className="hover:text-primary transition-colors">
+                About
+              </a>
+              <a
+                href="/stories"
+                className="hover:text-primary transition-colors"
+              >
+                Stories
+              </a>
+              <a
+                href="/programs"
+                className="hover:text-primary transition-colors"
+              >
+                Programs
+              </a>
+              <a
+                href="/Contact"
+                className="hover:text-primary transition-colors"
+              >
+                Contact Us
+              </a>
             </div>
           </nav>
         )}

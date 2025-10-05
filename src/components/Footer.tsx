@@ -19,27 +19,25 @@ export const Footer = () => {
           <div>
             <h3 className="font-bold mb-4 uppercase">About</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-secondary transition-colors">Our Mission</a></li>
+              <li><a href="/About" className="hover:text-secondary transition-colors">Our Mission</a></li>
               <li><a href="#" className="hover:text-secondary transition-colors">Our Team</a></li>
-              <li><a href="#" className="hover:text-secondary transition-colors">Reports</a></li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-bold mb-4 uppercase">Get Involved</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-secondary transition-colors">Donate</a></li>
-              <li><a href="#" className="hover:text-secondary transition-colors">Volunteer</a></li>
-              <li><a href="#" className="hover:text-secondary transition-colors">Partner</a></li>
+              <li><a href="/Donate" className="hover:text-secondary transition-colors">Donate</a></li>
+              <li><a href="/signup" className="hover:text-secondary transition-colors">Join Us</a></li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-bold mb-4 uppercase">Contact</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-secondary transition-colors">Email Us</a></li>
-              <li><a href="#" className="hover:text-secondary transition-colors">Press</a></li>
-              <li><a href="#" className="hover:text-secondary transition-colors">FAQ</a></li>
+              <li><a href="#" className="hover:text-secondary transition-colors">0100 - Nairobi - Kenya</a></li>
+              <li><a href="#" className="hover:text-secondary transition-colors">info@solarlex.com</a></li>
+              <li><a href="#" className="hover:text-secondary transition-colors">+254701234567 / +2547988765432</a></li>
             </ul>
           </div>
         </div>

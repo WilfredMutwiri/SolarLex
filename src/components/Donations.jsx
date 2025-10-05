@@ -11,7 +11,7 @@ export const Donations = () => {
         </h2>      <p className="text-lg mb-6 text-center">
         Your generous donations help us bring solar energy to communities in need around the world.
       </p>
-      <div className="flex-col md:flex-row justify-center items-center gap-6">
+      <div className="flex flex-col md:flex-row justify-center items-baseline md:items-center gap-6">
         <div className='flex-1'>
         <img src={solar3} alt="Solar Panel Installation" className="w-full md:w-1/2 rounded-lg shadow-lg" />
         </div>

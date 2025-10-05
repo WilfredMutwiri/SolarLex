@@ -6,7 +6,6 @@ import { StoryCards } from "@/components/StoryCards";
 import { ProgramCards } from "@/components/ProgramCards";
 import { ImpactStats } from "@/components/ImpactStats";
 import { Newsletter } from "@/components/Newsletter";
-import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (

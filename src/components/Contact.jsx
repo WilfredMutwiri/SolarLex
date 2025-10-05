@@ -12,7 +12,7 @@ export const Contact = () => {
       <p className="text-lg mb-6 text-center">
         We'd love to hear from you! Whether you have questions about our programs, want to get involved, or just want to say hello, feel free to reach out.
       </p>
-      <div className="flex-col md:flex-row justify-center items-center gap-6">
+      <div className="flex flex-col md:flex-row justify-center items-baseline md:items-center gap-6">
         <div className='flex-1'>
           <img src={solar2} alt="Contact Installation" className="w-full md:w-1/2 rounded-lg shadow-lg" />
         </div>

@@ -35,12 +35,12 @@ export const About = () => {
             
             <div className="flex space-x-10">
             {/* join button */}
-            <button className="mt-10 px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-secondary/90 transition duration-500 w-44"
+            <button className="mt-10 text-sm md:text-base px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-secondary/90 transition duration-500 w-44"
             onClick={() => window.location.href = '/Signup'}
             >
               Join Us
             </button>
-            <button className="mt-10 px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-secondary/90 transition duration-500 w-44"
+            <button className="mt-10 text-sm md:text-base px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-secondary/90 transition duration-500 w-44"
             onClick={() => window.location.href = '/Donate'}
             >
               Donate Today

@@ -9,7 +9,7 @@ export const About = () => {
           <span className="text-secondary">~</span> About Us{" "}
           <span className="text-secondary">~</span>
         </h2>
-        <div className="flex flex-row mt-6">
+        <div className="flex flex-col md:flex-row gap-4 mt-6">
           <div className="flex-1">
             <img
               src={holdBulb}

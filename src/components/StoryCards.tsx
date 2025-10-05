@@ -30,7 +30,7 @@ export const StoryCards = () => {
     <section id="stories" className="py-16 md:py-20 bg-background pt-28">
       <div className="container mx-auto px-4">
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-secondary-foreground mb-6 uppercase text-center"><span className="text-secondary">~</span> Stories of Light & Hope <span className="text-secondary">~</span></h2>
+          <h2 className="text-base md:text-4xl font-bold text-secondary-foreground mb-6 uppercase text-center"><span className="text-secondary">~</span> Stories of Light & Hope <span className="text-secondary">~</span></h2>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {stories.map((story, index) => (

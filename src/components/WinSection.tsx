@@ -6,7 +6,7 @@ export const WinSection = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-secondary-foreground mb-6 uppercase">
+            <h2 className="text-2xl md:text-5xl font-bold text-secondary-foreground mb-6 uppercase">
               A brighter win for people and the planet{" "}
             </h2>
           </div>
@@ -23,12 +23,11 @@ export const WinSection = () => {
               protecting the planet we share. Every solar light switched on is a
               small victory for people and the Earth.
             </p>
-            <Button
-              variant="outline"
-              className="border-secondary-foreground text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary"
+            <div
+              className="border-2 border-secondary-foreground rounded-md p-2 text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary transition duration-300 cursor-pointer w-fit"
             >
               Together, we can power lasting, sustainable progress.
-            </Button>
+            </div>
           </div>
         </div>
       </div>

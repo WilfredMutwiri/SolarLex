@@ -39,7 +39,7 @@ export const ProgramCards = () => {
     <section id="programs" className="py-16 md:py-20 bg-muted pt-28">
       <div className="container mx-auto px-4">
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-secondary-foreground mb-6 uppercase text-center"><span className="text-secondary">~</span> The brilliance of solar energy <span className="text-secondary">~</span></h2>
+          <h2 className="text-base md:text-4xl font-bold text-secondary-foreground mb-6 uppercase text-center"><span className="text-secondary">~</span> The brilliance of solar energy <span className="text-secondary">~</span></h2>
         </div>
         <div className="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-8">
           {programs.map((program, index) => {

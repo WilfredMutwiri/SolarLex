@@ -42,7 +42,7 @@ const ProgramDetail = () => {
                   <div className="relative container mx-auto px-4 py-20">
                     <div className=" mx-auto">
                       <div className="p-8 md:p-12 rounded-lg">
-                        <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-6 uppercase tracking-tight">
+                        <h1 className="text-3xl md:text-6xl font-bold text-primary-foreground mb-6 uppercase tracking-tight">
                         {program.heading}
                         </h1>
                         <Button variant="secondary" size="lg" className="mx-auto w-40">
@@ -55,7 +55,7 @@ const ProgramDetail = () => {
                 </section>
         </div>
       <Card className="p-8 shadow-lg">
-        <h1 className="text-4xl font-bold mb-4">{program.title}</h1>
+        <h1 className="text-xl md:text-4xl font-bold mb-4">{program.title}</h1>
         <p className="text-lg text-muted-foreground mb-8">
           {program.description}
         </p>

@@ -5,13 +5,13 @@ import solar3 from '@/assets/solar3.jpg'
 export const Donations = () => {
   return (
     <div className="container mx-auto px-4 py-16 pt-28">
-        <h2 className="text-3xl md:text-4xl font-bold text-secondary-foreground mb-6 uppercase text-center">
+        <h2 className="text-xl md:text-4xl font-bold text-secondary-foreground mb-6 uppercase text-center">
           <span className="text-secondary">~</span> Support Our Mission{" "}
           <span className="text-secondary">~</span>
         </h2>      <p className="text-lg mb-6 text-center">
         Your generous donations help us bring solar energy to communities in need around the world.
       </p>
-      <div className="flex md:flex-row justify-center items-center gap-6">
+      <div className="flex-col md:flex-row justify-center items-center gap-6">
         <div className='flex-1'>
         <img src={solar3} alt="Solar Panel Installation" className="w-full md:w-1/2 rounded-lg shadow-lg" />
         </div>
@@ -38,7 +38,7 @@ export const Donations = () => {
       </div>
       <div className="mt-12 text-center">
         <h2 className="text-2xl font-semibold mb-4">Other Ways to Support</h2>
-        <p className="text-lg mb-4">
+        <p className="text-base md:text-lg mb-4">
           If you're unable to donate, you can still help by volunteering, spreading the word about our mission, or partnering with us.
         </p>
       </div>

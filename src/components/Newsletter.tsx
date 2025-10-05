@@ -15,7 +15,7 @@ export const Newsletter = () => {
     <section className="py-16 md:py-20 bg-primary">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6 uppercase">
+          <h2 className="text-base md:text-4xl font-bold text-primary-foreground mb-6 uppercase">
             Join our mailing list
           </h2>
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">

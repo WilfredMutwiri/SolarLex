@@ -69,7 +69,7 @@ export const ImpactStats = () => {
     {/* testimonials section */}
     <section>
       <div className="container mx-auto px-4 py-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-secondary-foreground mb-6 uppercase text-center">
+        <h2 className="text-xl md:text-4xl font-bold text-secondary-foreground mb-6 uppercase text-center">
           <span className="text-secondary">~</span> What others Have To Say!{" "}
           <span className="text-secondary">~</span>
         </h2>

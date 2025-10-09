@@ -47,8 +47,8 @@ export const ProgramCards = () => {
             return (
               <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow group">
                 <div className="mb-4 flex justify-center">
-                  <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Icon className="w-8 h-8 text-primary-foreground" />
+                  <div className="p-3 bg-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Icon className="text-primary-foreground" />
                   </div>
                 </div>
                 <h3 className="text-xl font-bold mb-3">{program.title}</h3>

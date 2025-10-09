@@ -1,26 +1,14 @@
 import impactBg from "@/assets/impact-bg.jpg";
-
-const stats = [
-{
-  number: "2.4M",
-  label: "solar lights bringing brighter nights to homes worldwide",
-},
-{
-  number: "13.1M",
-  label: "lives across sub-Saharan Africa illuminated with clean, reliable energy",
-},
-{
-  number: "$312M",
-  label: "saved by families every year through affordable solar power",
-},
-];
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
+import { useState, useEffect } from "react";
 
 const testimonials = [
   {
     quote: "SolarLex transformed our village. We now have light at night, and my children can study after dark.",
     name: "Amina, Kenya",
     image: "https://randomuser.me/api/portraits/women/62.jpg",
-  },  
+  },
   {
     quote: "Thanks to SolarLex, our community has access to clean energy. It has improved our quality of life significantly.",
     name: "Mark, Kenya",
@@ -43,52 +31,97 @@ const testimonials = [
   },
 ];
 
+const stats = [
+  { number: 2.4, suffix: "M", label: "solar lights bringing brighter nights to homes worldwide" },
+  { number: 13.1, suffix: "M", label: "lives across sub-Saharan Africa illuminated with clean, reliable energy" },
+  { number: 312, prefix: "$", suffix: "M", label: "saved by families every year through affordable solar power" },
+];
 
 export const ImpactStats = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.3,
+  });
+
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    if (inView) {
+      setAnimate(true);
+    } else {
+      setAnimate(false);
+    }
+  }, [inView]);
+
   return (
     <div>
-          <section 
-      id="impact" 
-      className="relative py-20 md:py-32 bg-cover bg-center"
-      style={{ backgroundImage: `url(${impactBg})` }}
-    >
-      <div className="absolute inset-0 bg-black/60"></div>
-      <div className="relative container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-12">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-5xl md:text-7xl font-bold text-secondary mb-4">
-                {stat.number}
+      {/* ===== Impact Section ===== */}
+      <section
+        id="impact"
+        ref={ref}
+        className="relative py-20 md:py-32 bg-cover bg-center"
+        style={{ backgroundImage: `url(${impactBg})` }}
+      >
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="relative container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-12">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-5xl md:text-7xl font-bold text-secondary mb-4">
+                  {animate ? (
+                    <CountUp
+                      key={index + Date.now()}
+                      start={0}
+                      end={stat.number}
+                      duration={3}
+                      decimals={stat.number % 1 !== 0 ? 1 : 0}
+                      prefix={stat.prefix || ""}
+                      suffix={stat.suffix || ""}
+                    />
+                  ) : (
+                    `${stat.prefix || ""}0${stat.suffix || ""}`
+                  )}
+                </div>
+                <p className="text-xl text-white font-medium">{stat.label}</p>
               </div>
-              <p className="text-xl text-white font-medium">{stat.label}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
-    {/* testimonials section */}
-    <section>
-      <div className="container mx-auto px-4 py-16">
-        <h2 className="text-xl md:text-4xl font-bold text-secondary-foreground mb-6 uppercase text-center">
-          <span className="text-secondary">~</span> What others Have To Say!{" "}
-          <span className="text-secondary">~</span>
-        </h2>
-        <div className="grid md:grid-cols-3 gap-8 mt-6">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ">
-              <p className="text-gray-700 italic mb-4">"{testimonial.quote}"</p>
-              <div className="flex items-center mt-4 gap-4">
-                <img
-                  src={`${testimonial.image}`} className="w-12 h-12 rounded-full mr-4" 
-                  alt={testimonial.name}
-                />
-                <div className="text-gray-900 font-semibold">{testimonial.name}</div>
-              </div>
-            </div>
-          ))}
-        </div>  
-      </div>
-    </section>
+      </section>
+
+      {/* ===== Testimonials Section (Infinite Flow) ===== */}
+<section className="relative overflow-hidden py-16 bg-background group">
+  <h2 className="text-xl md:text-4xl font-bold text-secondary-foreground mb-6 uppercase text-center">
+    <span className="text-secondary">~</span> What others Have To Say!{" "}
+    <span className="text-secondary">~</span>
+  </h2>
+
+  <div className="relative w-full overflow-hidden">
+    <div
+      className="flex animate-scroll-x group-hover:[animation-play-state:paused]"
+      style={{ minWidth: "max-content" }}
+    >
+{/* Duplicate testimonials multiple times to ensure continuous flow */}
+      {[...testimonials, ...testimonials, ...testimonials].map((testimonial, index) => (
+        <div
+          key={index}
+          className="w-[450px] bg-primary mx-6 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex-shrink-0"
+        >
+          <p className="text-gray-50 italic mb-4">"{testimonial.quote}"</p>
+          <div className="flex items-center mt-4 gap-4">
+            <img
+              src={testimonial.image}
+              className="w-12 h-12 rounded-full"
+              alt={testimonial.name}
+            />
+            <div className="text-gray-50 font-semibold">{testimonial.name}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };

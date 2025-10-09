@@ -561,7 +561,7 @@ video {
   --card-foreground: 0 0% 0%;
   --popover: 0 0% 100%;
   --popover-foreground: 0 0% 0%;
-  --primary: 228 56% 18%;
+  --primary:179 50% 20%;
   --primary-foreground: 0 0% 100%;
   --secondary: 48 100% 50%;
   --secondary-foreground: 0 0% 0%;
@@ -825,6 +825,11 @@ body {
 .mx-3\.5 {
   margin-left: 0.875rem;
   margin-right: 0.875rem;
+}
+
+.mx-6 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 .mx-auto {
@@ -1099,8 +1104,8 @@ body {
   width: 2.75rem;
 }
 
-.w-14 {
-  width: 3.5rem;
+.w-12 {
+  width: 3rem;
 }
 
 .w-2 {
@@ -1133,6 +1138,10 @@ body {
 
 .w-5 {
   width: 1.25rem;
+}
+
+.w-56 {
+  width: 14rem;
 }
 
 .w-6 {
@@ -1169,6 +1178,10 @@ body {
 
 .w-\[1px\] {
   width: 1px;
+}
+
+.w-\[450px\] {
+  width: 450px;
 }
 
 .w-\[600px\] {
@@ -1240,6 +1253,10 @@ body {
 
 .flex-1 {
   flex: 1 1 0%;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
 }
 
 .shrink-0 {
@@ -1342,8 +1359,20 @@ body {
           user-select: none;
 }
 
+.list-inside {
+  list-style-position: inside;
+}
+
+.list-disc {
+  list-style-type: disc;
+}
+
 .list-none {
   list-style-type: none;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -1564,10 +1593,6 @@ body {
   border-color: var(--color-border);
 }
 
-.border-background\/20 {
-  border-color: hsl(var(--background) / 0.2);
-}
-
 .border-border {
   border-color: hsl(var(--border));
 }
@@ -1591,6 +1616,11 @@ body {
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
+}
+
+.border-gray-950 {
+  --tw-border-opacity: 1;
+  border-color: rgb(3 7 18 / var(--tw-border-opacity, 1));
 }
 
 .border-input {
@@ -1668,6 +1698,11 @@ body {
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
 }
 
 .bg-gray-50 {
@@ -1992,6 +2027,10 @@ body {
   text-transform: uppercase;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .tabular-nums {
   --tw-numeric-spacing: tabular-nums;
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
@@ -2054,6 +2093,16 @@ body {
   color: hsl(var(--foreground) / 0.5);
 }
 
+.text-gray-50 {
+  --tw-text-opacity: 1;
+  color: rgb(249 250 251 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity, 1));
+}
+
 .text-gray-600 {
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity, 1));
@@ -2062,6 +2111,16 @@ body {
 .text-gray-700 {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-900 {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity, 1));
+}
+
+.text-green-500 {
+  --tw-text-opacity: 1;
+  color: rgb(34 197 94 / var(--tw-text-opacity, 1));
 }
 
 .text-muted-foreground {
@@ -2367,6 +2426,20 @@ body {
 All colors MUST be HSL.
 */
 
+@keyframes scroll-x {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-x {
+  animation: scroll-x 40s linear infinite;
+}
+
 .file\:border-0::file-selector-button {
   border-width: 0px;
 }
@@ -2568,6 +2641,12 @@ All colors MUST be HSL.
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.hover\:shadow-lg:hover {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .hover\:shadow-xl:hover {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
@@ -2700,6 +2779,10 @@ All colors MUST be HSL.
 
 .group:hover .group-hover\:opacity-100 {
   opacity: 1;
+}
+
+.group:hover .group-hover\:\[animation-play-state\:paused\] {
+  animation-play-state: paused;
 }
 
 .group.destructive .group-\[\.destructive\]\:border-muted\/40 {
@@ -3569,14 +3652,14 @@ All colors MUST be HSL.
     line-height: 1;
   }
 
-  .md\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-
   .md\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .md\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   .md\:opacity-0 {

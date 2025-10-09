@@ -12,8 +12,11 @@ export const Header = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <a href="/" className="flex items-center gap-2">
-              <img src={logo} className="w-14" />
-              <span className="text-xl font-bold">SolarLex</span>
+              <img src={logo} className="w-56" />
+              {/* <div className="flex flex-col  pt-4">
+                <span className="text-xl font-bold">Sunlight Solar Africa</span>
+                <span className="italic text-sm text-gray-900 text-center">light the continent</span>
+              </div> */}
             </a>
           </div>
 

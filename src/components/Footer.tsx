@@ -9,13 +9,9 @@ export const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
-          <div className="flex items-center">
+          <div className="flex items-center justify-center md:justify-normal">
             <a href="/" className="flex items-center gap-2">
-              <img src={logo} className="w-56" />
-              {/* <div className="flex flex-col  pt-4">
-                <span className="text-xl font-bold">Sunlight Solar Africa</span>
-                <span className="italic text-sm text-gray-900 text-center">light the continent</span>
-              </div> */}
+              <img src={logo} className="w-56 -mt-14" />
             </a>
           </div>
           </div>

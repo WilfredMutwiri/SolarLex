@@ -18,7 +18,7 @@ export const About = () => {
           </div>
           <div className="flex-1">
             <p className="text-lg text-gray-700">
-              SolarLex is dedicated to bringing clean, renewable solar energy to
+              SquidLight Solar Africa is dedicated to bringing clean, renewable solar energy to
               communities in need around the world. Our mission is to improve
               lives by providing sustainable energy solutions that empower
               individuals and foster economic growth. Since our founding, we

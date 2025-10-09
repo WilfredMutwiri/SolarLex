@@ -47,7 +47,7 @@ export const Footer = () => {
         </div>
 
         <div className="text-gray-900 mt-12 pt-8 border-t border-gray-950 text-center text-sm opacity-80">
-          <p>`&copy; {currentYear} SquidLight Solar Africa. All rights reserved.`</p>
+          <p>&copy; {currentYear} SquidLight Solar Africa. All rights reserved.</p>
         </div>
       </div>
     </footer>
